@@ -34,10 +34,14 @@ Postman to hit the endpoint directly and it still didn't return data.
 ## Project Setup
 - Clone application
 - Copy `.env.example` to `.env` - Fill in necessary API credentials
-- Run `docker-compose up -d` to bring up the application
+- Run `docker-compose build`
+- Run `docker-compose up -d dev` to bring up the application
 - Exec into the dev container `docker-compose exec dev bash`
-- From within the dev container - Install composer dependencies `composer install`, exit container once complete
-- Run migrations `docker-compose run dev php artisan migrate`
+- From within the dev container - Install composer dependencies `composer install`
+- Within the dev container - Run Migrations: `php artisan migrate`
+- Exit dev container
+- Run `docker-compose up -d` to bring up the application
+- Should be able to hit endpoints with postman at this point
 
 ## Running Tests
 - Run `docker-compose exec dev bash`
