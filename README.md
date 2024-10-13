@@ -37,8 +37,6 @@ Postman to hit the endpoint directly and it still didn't return data.
 - Run `docker-compose up -d`
 - Exec into the dev container `docker-compose exec dev bash`
 - From within the dev container - Install composer dependencies `composer install`
-- Create database `nyt` using postgres connection credentials
-- Within the dev container - Run Migrations: `php artisan migrate`
 - Exit dev container
 - Run `docker-compose up -d`
 - Should be able to hit endpoints with postman at this point
